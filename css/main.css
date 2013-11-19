@@ -7278,18 +7278,20 @@ body p, html p {
 }
 /* line 128, sass/main.scss */
 .searchBar img {
-  float: left;
   width: 18px;
   margin: 5px 5px 0;
 }
-/* line 133, sass/main.scss */
+/* line 132, sass/main.scss */
 .searchBar img:first-child {
   margin-left: 10px;
 }
-/* line 138, sass/main.scss */
+/* line 137, sass/main.scss */
+.searchBar img, .searchBar input {
+  float: left;
+}
+/* line 139, sass/main.scss */
 .searchBar input {
   width: 75%;
-  float: right;
   border: none;
 }
 
@@ -7347,8 +7349,8 @@ body p, html p {
 }
 /* line 204, sass/main.scss */
 .timeline h3 {
-  color: white;
-  text-shadow: 1px 1px #ddd;
+  color: #333;
+  text-shadow: 1px 1px white;
   font-weight: normal;
 }
 /* line 210, sass/main.scss */

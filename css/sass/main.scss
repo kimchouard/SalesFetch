@@ -126,7 +126,6 @@ body, html {
     padding-top: 10px;
     
     img {
-        float: left;
         width: 18px;
         margin: 5px 5px 0;
         
@@ -135,9 +134,10 @@ body, html {
         }
     }
     
+    img, input { float: left; }
+    
     input {
         width: 75%;
-        float: right;
         border: none;
     }
 }
@@ -202,8 +202,8 @@ body, html {
     padding: 10px;
     
     h3 {
-        color: white;
-        text-shadow: 1px 1px #ddd;
+        color: #333;
+        text-shadow: 1px 1px white;
         font-weight: normal;
     }
     

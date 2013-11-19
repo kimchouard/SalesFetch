@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="SalesFetchApp"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,16 +12,15 @@
 
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
+    <body ng-controller="UsersCtrl">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         
         <div class="searchBar row">
             <img src="img/home.svg" />
-            <img src="img/search.svg" />
-            
             <input type="text" placeholder="Smith, John" />
+            <img src="img/search.svg" />
         </div>
         
         <div class="headerContact">
@@ -46,6 +45,48 @@
                    
             
             <section class="timeslice">
+                <div class="row item">
+                    <div class="headerItem">
+                        <div class="icons">
+                            <img class="iconItem" src="img/mail.png" />
+                            <img class="iconProvider" src="img/gmail_icon.svg" />
+                        </div>
+                        <div class="text">
+                            <h2>Meeting with John</h2>
+                            <h2 class="date">Tue. 21 Nov.</h2>
+                        </div>
+                        <br clear="both"/>
+                    </div>
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius...</p>
+                </div>
+                <div class="row item">
+                    <div class="headerItem">
+                        <div class="icons">
+                            <img class="iconItem" src="img/jpg.png" />
+                            <img class="iconProvider" src="img/drive_icon.svg" />
+                        </div>
+                        <div class="text">
+                            <h2>Meeting with John</h2>
+                            <h2 class="date">Tue. 21 Nov.</h2>
+                        </div>
+                        <br clear="both"/>
+                    </div>
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius...</p>
+                </div>
+                <div class="row item">
+                    <div class="headerItem">
+                        <div class="icons">
+                            <img class="iconItem" src="img/pdf_search.svg" />
+                            <img class="iconProvider" src="img/salesforce.png" />
+                        </div>
+                        <div class="text">
+                            <h2>Meeting with John</h2>
+                            <h2 class="date">Tue. 21 Nov.</h2>
+                        </div>
+                        <br clear="both"/>
+                    </div>
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius...</p>
+                </div>
                 <div class="row item">
                     <div class="headerItem">
                         <div class="icons">
