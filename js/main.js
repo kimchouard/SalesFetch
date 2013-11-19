@@ -98,18 +98,26 @@ app.factory('Base64', function() {
 
 //TODO : Manage offline project list when errors
 this.UsersCtrl = function($scope, $http, Base64) {
+    
+    $scope.Date = Date;
 	
     $scope.getTimeline = function() {
         $http.defaults.headers.common['Authorization'] = 'Basic ' + Base64.encode('salesfetch@gmail.com' + ':' + 'Dreamforce2013');
 	$http({method: 'GET', url: 'http://api.anyfetch.com/documents?search='+$scope.contact+'&limit=50'})
         .success(function(data, status, headers, config) {
-            console.log(data);
+            for (var i = 0; i < data.datas.length; i++) {
+                var actItem = data.datas[i];
+                actItem.date = Date(actItem.creation_date);
+            }
+            
+            console.log(data.datas);
             $scope.items = data.datas;
+            console.log($scope.items.length);
             // this callback will be called asynchronously
             // when the response is available
         })
         .error(function(data, status, headers, config) {
-            console.log(data);
+            console.log("Error", data);
             // called asynchronously if an error occurs
             // or server returns response with an error status.
         });

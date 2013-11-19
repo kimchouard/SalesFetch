@@ -19,11 +19,11 @@
         
         <div class="searchBar row">
             <img src="img/home.svg" />
-            <input type="text" placeholder="Smith, John" />
-            <img src="img/search.svg" />
+            <input type="text" placeholder="Einstein" value="Einstein" ng-model="contact"/>
+            <img src="img/search.svg" ng-click="getTimeline()"/>
         </div>
         
-        <div class="headerContact">
+        <div class="headerContact" ng-hide="true">
             <div class="infosContact row">
                 <div class="contactBuble">
                     <div class="image"><img src="img/smith_john.jpg"/></div>
@@ -40,66 +40,24 @@
             </div>
         </div>
         
-        <div class="timeline">
+        <div class="timeline" ng-show="items.length != 0">
             <h3>This week</h3>
                    
             
             <section class="timeslice">
-                <div class="row item">
-                    <div class="headerItem">
-                        <div class="icons">
-                            <img class="iconItem" src="img/mail.png" />
-                            <img class="iconProvider" src="img/gmail_icon.svg" />
-                        </div>
-                        <div class="text">
-                            <h2>Meeting with John</h2>
-                            <h2 class="date">Tue. 21 Nov.</h2>
-                        </div>
-                        <br clear="both"/>
-                    </div>
-                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius...</p>
-                </div>
-                <div class="row item">
+                <div class="row item" ng-repeat="item in items">
                     <div class="headerItem">
                         <div class="icons">
                             <img class="iconItem" src="img/jpg.png" />
-                            <img class="iconProvider" src="img/drive_icon.svg" />
-                        </div>
-                        <div class="text">
-                            <h2>Meeting with John</h2>
-                            <h2 class="date">Tue. 21 Nov.</h2>
-                        </div>
-                        <br clear="both"/>
-                    </div>
-                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius...</p>
-                </div>
-                <div class="row item">
-                    <div class="headerItem">
-                        <div class="icons">
-                            <img class="iconItem" src="img/pdf_search.svg" />
-                            <img class="iconProvider" src="img/salesforce.png" />
-                        </div>
-                        <div class="text">
-                            <h2>Meeting with John</h2>
-                            <h2 class="date">Tue. 21 Nov.</h2>
-                        </div>
-                        <br clear="both"/>
-                    </div>
-                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius...</p>
-                </div>
-                <div class="row item">
-                    <div class="headerItem">
-                        <div class="icons">
-                            <img class="iconItem" src="img/mail.png" />
                             <img class="iconProvider" src="img/gmail_icon.svg" />
                         </div>
                         <div class="text">
-                            <h2>Meeting with John</h2>
-                            <h2 class="date">Tue. 21 Nov.</h2>
+                            <h2>{{item.datas.title}}</h2>
+                            <h2 class="date">{{item.date}}</h2>
                         </div>
                         <br clear="both"/>
                     </div>
-                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius...</p>
+                    <p class="details">Details not yet available...</p>
                 </div>
             </section>
         </div>
