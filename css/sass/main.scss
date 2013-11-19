@@ -15,10 +15,33 @@ $menu-font-size: 20;
 	font-style: normal;
 }
 
-$body-font-family: 'Open Sans', Cambria, 'Times New Roman', Times, sans-serif !default;
-$header-font-family: 'Open Sans', Cambria, 'Times New Roman', Times, sans-serif !default;
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('../fonts/HelveticaNeueLTStd-Roman.otf');
+    font-weight: normal;
+}
 
-    
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('../fonts/HelveticaNeueLTStd-Md.otf');
+    font-weight: bold;
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('../fonts/HelveticaNeueLTStd-Md.otf');
+    font-weight:medium;
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('../fonts/HelveticaNeueLTStd-Th.otf');
+    font-weight:thin;
+}
+
+
+$body-font-family: HelveticaNeue, Cambria, 'Times New Roman', Times, sans-serif !default;
+$header-font-family: HelveticaNeue, Cambria, 'Times New Roman', Times, sans-serif !default;
 
 // Global Foundation Settings
 @import "settings";
@@ -84,11 +107,46 @@ $header-font-family: 'Open Sans', Cambria, 'Times New Roman', Times, sans-serif 
 
 body, html {
     background: $neutral-color;
+    
+    //RESPONSIVE MINI SCREEN
+    h2 { font-size: 1em; }
+    h3 { font-size: 0.8em; }
+    h4 { font-size: 0.6em; }
+    p { font-size: 0.8em; }
 }
 
-.headerTop {
+
+
+//-------------------------------------------------------
+//              Search bar
+//-------------------------------------------------------
+
+.searchBar {
     background: white;
+    padding-top: 10px;
+    
+    img {
+        float: left;
+        width: 18px;
+        margin: 5px 5px 0;
+        
+        &:first-child {
+            margin-left: 10px;
+        }
+    }
+    
+    input {
+        width: 75%;
+        float: right;
+        border: none;
+    }
 }
+
+
+
+//-------------------------------------------------------
+//              header Contact
+//-------------------------------------------------------
 
 .headerContact {
     background: $primary-color;
@@ -100,20 +158,30 @@ body, html {
         width: 80px;
         overflow: hidden;
         border: 1px white solid;
+        float: left;
+        margin: 0 10px; 
         
-        .image { 
-            position: relative; left: -17px;
+        .image {
             width: 80px; height: 80px;
         }
     }
     
     .line {
         float: left;
-        span { color: white; }
+        h2 {
+            color: white;
+        }
+        
+        .desc {
+            background: white;
+            color: black;
+            padding: 5px 5px 0;
+        }
         
         .minor {
-            font-weight: normal;
+            font-weight: 200 !important;
         }
+        
     }
     
     .actions {
@@ -124,54 +192,71 @@ body, html {
     }
 }
 
+
+
+//-------------------------------------------------------
+//              Timeline
+//-------------------------------------------------------
+
 .timeline {
     padding: 10px;
     
     h3 {
         color: white;
         text-shadow: 1px 1px #ddd;
-        font-size: 18px;
         font-weight: normal;
     }
     
     .timeslice {
         background: white;
-        padding: 0 10px;
+        padding: 0 10px 20px;
         
         .item {
             border-bottom: 2px $primary-color solid;
             margin-bottom: 10px;
-            height: 80px;
+            padding: 15px 10px 0;
             
             .details {
                 text-align: justify;
             }
             
-            .date {
-                font-weight: normal;
-                text-align: right;
-            }
-            
-            .icons {
-                width: 40px;
-                margin: 20px auto 0;
-                position: relative;
-                left: 20px;
-                float: left;
+            .headerItem {
+                .date {
+                    font-weight: normal;
+                    float: left;
+                    //BIG SCREEN
+                    //text-align: right;
+                }
                 
-                //.iconItem { width: 34px; }
-                .iconProvider {
-                    width: 20px;
-                    position: absolute;
-                    bottom: -5px;
-                    left: -10px;
+                .icons {
+                    width: 40px;
+                    position: relative;
+                    left: 10px;
+                    top: -5px;
+                    float: left;
+                    
+                    //.iconItem { width: 34px; }
+                    .iconProvider {
+                        width: 20px;
+                        position: absolute;
+                        bottom: -5px;
+                        left: -10px;
+                    }
+                }
+                
+                .text {
+                    margin: 5px 0 0 60px;
+                    
+                    h2 {
+                        margin: 0px;
+                        padding-left: 0;
+                    }
                 }
             }
             
-            h2 {
-                margin-top: 10px;
-                padding-left: 0;
-                font-size: 21px;
+            p {
+                clear: both;
+                margin: 10px 0 5px;
             }
         }
     }

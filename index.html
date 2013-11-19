@@ -17,23 +17,22 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         
-        <div class="headerTop row">
-            <div class="small-2 columns">
-                <img src="img/home.svg" />
-                <img src="img/search.svg" />
-            </div>
-            <div class="small-10 columns">
-                <input type="text" placeholder="Smith, John" />
-            </div>
+        <div class="searchBar row">
+            <img src="img/home.svg" />
+            <img src="img/search.svg" />
+            
+            <input type="text" placeholder="Smith, John" />
         </div>
         
         <div class="headerContact">
             <div class="infosContact row">
-                <div class="small-2 columns contactBuble">
+                <div class="contactBuble">
                     <div class="image"><img src="img/smith_john.jpg"/></div>
                 </div>
-                <div class="small-10 columns line">
-                    <h2><span>VP, Sales</span><span class="minor"> at </span><span>BMI General Licensing</span></h2>
+                <div class="small-8 columns line">
+                    <h2>VP, Sales</h2><h2 class="company"><span class="minor">at </span>BMI General Licensing</h2>
+                    
+                    <p class="desc">Important guy</p>
                 </div>
             </div>
             <div class="row actions">
@@ -44,23 +43,23 @@
         
         <div class="timeline">
             <h3>This week</h3>
+                   
             
             <section class="timeslice">
                 <div class="row item">
-                    <div class="icons">
-                        <img class="iconItem" src="img/mail.png" />
-                        <img class="iconProvider" src="img/gmail_icon.svg" />
-                    </div>
-                    <div class="small-10 small-offset-1 columns">
-                        <div class="row">
-                            <h2 class="small-8 columns">Meeting with John</h2>
-                            <h2 class="small-4 columns date">Tue. 21 Nov.</h2>
+                    <div class="headerItem">
+                        <div class="icons">
+                            <img class="iconItem" src="img/mail.png" />
+                            <img class="iconProvider" src="img/gmail_icon.svg" />
                         </div>
-                        <div class="row details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius...</div>
+                        <div class="text">
+                            <h2>Meeting with John</h2>
+                            <h2 class="date">Tue. 21 Nov.</h2>
+                        </div>
+                        <br clear="both"/>
                     </div>
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius...</p>
                 </div>
-                
-                <br clear="all" />
             </section>
         </div>
 
@@ -80,5 +79,6 @@
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+         
     </body>
 </html>
