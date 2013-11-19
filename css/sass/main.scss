@@ -1,6 +1,7 @@
-
 //Foundation override
-$primary-color: rgb(255, 0, 0);
+$secondary-color: rgb(63, 150, 69);
+$primary-color: rgb(122, 193, 67);
+$neutral-color: #eee;
 //Personnal variables
 $header-height: 400;
 $menu-height: 50;
@@ -75,3 +76,103 @@ $header-font-family: 'Open Sans', Cambria, 'Times New Roman', Times, sans-serif 
 // @import "foundation/components/thumbs";
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
+
+
+//-------------------------------------------------------
+//              Main Styles
+//-------------------------------------------------------
+
+body, html {
+    background: $neutral-color;
+}
+
+.headerTop {
+    background: white;
+}
+
+.headerContact {
+    background: $primary-color;
+    color: white;
+    padding: 10px 0 0;
+    
+    .contactBuble {
+        @include border-radius(40px);
+        width: 80px;
+        overflow: hidden;
+        border: 1px white solid;
+        
+        .image { 
+            position: relative; left: -17px;
+            width: 80px; height: 80px;
+        }
+    }
+    
+    .line {
+        float: left;
+        span { color: white; }
+        
+        .minor {
+            font-weight: normal;
+        }
+    }
+    
+    .actions {
+        background: rgba(255, 255, 255, 0.4);
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+}
+
+.timeline {
+    padding: 10px;
+    
+    h3 {
+        color: white;
+        text-shadow: 1px 1px #ddd;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    
+    .timeslice {
+        background: white;
+        padding: 0 10px;
+        
+        .item {
+            border-bottom: 2px $primary-color solid;
+            margin-bottom: 10px;
+            height: 80px;
+            
+            .details {
+                text-align: justify;
+            }
+            
+            .date {
+                font-weight: normal;
+                text-align: right;
+            }
+            
+            .icons {
+                width: 40px;
+                margin: 20px auto 0;
+                position: relative;
+                left: 20px;
+                float: left;
+                
+                //.iconItem { width: 34px; }
+                .iconProvider {
+                    width: 20px;
+                    position: absolute;
+                    bottom: -5px;
+                    left: -10px;
+                }
+            }
+            
+            h2 {
+                margin-top: 10px;
+                padding-left: 0;
+                font-size: 21px;
+            }
+        }
+    }
+}
